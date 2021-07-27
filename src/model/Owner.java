@@ -12,4 +12,21 @@ public class Owner extends User {
     public Wallet getWallet(){
         return wallet;
     }
+
+    public String compararWallet(Wallet otraWallet){
+        Wallet miWallet = getWallet();
+
+        if(miWallet.getSaldo()> otraWallet.getSaldo()){
+            return "mi Wallet tiene mas saldo";
+        }
+        else if(miWallet.getSaldo() == otraWallet.getSaldo()){
+            return "Ambas Wallet tienen el mismo saldo";
+        }
+        else if(miWallet.getSaldo() < otraWallet.getSaldo()){
+            return "La otra Wallet tiene mas saldo";
+        }
+        else{ return "hubo un error";}
+    }
+
+
 }

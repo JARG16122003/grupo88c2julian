@@ -11,8 +11,10 @@ public class UserView {
         System.out.println(cliente2.getNombre());
         String response = cliente1.getWallet().saveMoney(100000);
         System.out.println(response);
-        System.out.println(cliente1.getWallet().getSaldo());
-        System.out.println(cliente2.getWallet().getSaldo());
+        //System.out.println(cliente1.getWallet().getSaldo());
+        //System.out.println(cliente2.getWallet().getSaldo());
+        System.out.println(cliente1.compararWallet(cliente2.getWallet()));
+        
 
     }
 }
